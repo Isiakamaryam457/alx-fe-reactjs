@@ -1,68 +1,61 @@
 import { Link } from 'react-router-dom';
 import useRecipeStore from './recipeStore';
-import { useEffect, useState } from 'react';
 
 const RecipeList = () => {
-  const searchTerm = useRecipeStore((state) => state.searchTerm);
-  const setSearchTerm = useRecipeStore((state) => state.setSearchTerm);
-  const getFilteredRecipes = useRecipeStore((state) => state.getFilteredRecipes);
-  const [filteredRecipes, setFilteredRecipes] = useState([]);
+  const recipes = useRecipeStore(state => state.recipes);
+  const favorites = useRecipeStore(state => state.favorites);
+  const addFavorite = useRecipeStore(state => state.addFavorite);
+  const removeFavorite = useRecipeStore(state => state.removeFavorite);
 
-  useEffect(() => {
-    const results = getFilteredRecipes();
-    setFilteredRecipes(results);
-  }, [searchTerm, getFilteredRecipes]);
+  const isFavorite = (id) => favorites.includes(id);
+
+  const toggleFavorite = (id) => {
+    isFavorite(id) ? removeFavorite(id) : addFavorite(id);
+  };
 
   return (
-    <div style={{ marginTop: '30px' }}>
-      <h2>Search Recipes</h2>
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Search by title..."
-        style={{
-          width: '100%',
-          padding: '10px',
-          marginBottom: '20px',
-          borderRadius: '4px',
-          border: '1px solid #ccc',
-          fontSize: '16px',
-        }}
-      />
-
-      <h2>Filtered Results</h2>
-
-      {filteredRecipes.length === 0 ? (
-        <p>No matches found for "{searchTerm}"</p>
+    <div>
+      <h2>All Recipes</h2>
+      {recipes.length === 0 ? (
+        <p>No recipes yet. Add one above!</p>
       ) : (
-        filteredRecipes.map((recipe) => (
-          <div
-            key={recipe.id}
-            style={{
-              border: '1px solid #ccc',
-              padding: '15px',
-              margin: '10px 0',
-              borderRadius: '5px',
-            }}
-          >
+        recipes.map(recipe => (
+          <div key={recipe.id} style={{
+            border: '1px solid #ccc',
+            padding: '15px',
+            margin: '10px 0',
+            borderRadius: '5px'
+          }}>
             <h3>{recipe.title}</h3>
             <p>{recipe.description}</p>
 
-            <Link
-              to={`/recipe/${recipe.id}`}
-              style={{
-                display: 'inline-block',
-                backgroundColor: '#007bff',
-                color: 'white',
-                padding: '8px 16px',
-                textDecoration: 'none',
-                borderRadius: '4px',
-                marginTop: '10px',
-              }}
-            >
-              View Details
-            </Link>
+            <div style={{ marginTop: '10px', display: 'flex', gap: '10px' }}>
+              <Link
+                to={`/recipe/${recipe.id}`}
+                style={{
+                  backgroundColor: '#007bff',
+                  color: 'white',
+                  padding: '8px 12px',
+                  borderRadius: '4px',
+                  textDecoration: 'none'
+                }}
+              >
+                View Details
+              </Link>
+
+              <button
+                onClick={() => toggleFavorite(recipe.id)}
+                style={{
+                  padding: '8px 12px',
+                  borderRadius: '4px',
+                  backgroundColor: isFavorite(recipe.id) ? '#dc3545' : '#28a745',
+                  color: 'white',
+                  border: 'none'
+                }}
+              >
+                {isFavorite(recipe.id) ? 'Unfavorite' : 'Favorite'}
+              </button>
+            </div>
           </div>
         ))
       )}
