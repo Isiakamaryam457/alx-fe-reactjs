@@ -36,13 +36,12 @@ export default function Search({ onSearch }) {
         <button type="submit">Search</button>
       </form>
 
-      {/* Loading State */}
       {loading && <p>Loading...</p>}
 
-      {/* Error State */}
+      
       {error && <p>Looks like we can't find the user</p>}
 
-      {/* Success State */}
+      
       {userData && (
         <div style={{ marginTop: '1rem' }}>
           <img src={userData.avatar_url} alt="avatar" width={100} />
