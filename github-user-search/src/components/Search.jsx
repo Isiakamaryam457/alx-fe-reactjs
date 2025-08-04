@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { fetchUserData } from '../services/githubService';
 
+
 export default function Search({ onSearch }) {
   const [username, setUsername] = useState('');
   const [location, setLocation] = useState('');
