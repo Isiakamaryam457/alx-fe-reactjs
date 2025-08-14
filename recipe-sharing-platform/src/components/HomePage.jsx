@@ -42,7 +42,13 @@ const HomePage = () => {
             <h1 className="flex mb-10 text-red-400">Recipe sharing platform</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 {recipes.map((recipe) => (
-                    <div key={recipe.id} className="bg-red-400 text-black p-10 rounded-lg hover:bg-red-300">
+                    <div key={recipe.id} className="bg-red-400
+                     text-black p-10 rounded-lg
+                      transform transition-all duration-500 ease-in-out
+                     hover:bg-red-300
+                     hover:scale-105 hover:shadow-2xl
+                      "
+                      >
                         <h3>{recipe.title}</h3>
                         <div> 
                             <h4>Summary</h4>
