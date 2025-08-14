@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+    "image": "image1.png"
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+    "image": "image3.png"
+  },
+  {
+    "id": 3,
+    "title": "eba and ogbono",
+    "summary": "a delicious nigerian delicacy made from dried cassava and dried obono tree seeds",
+    "image": "image2.png"
+  }
+]
