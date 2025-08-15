@@ -3,18 +3,75 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "image1.png"
+    "image": "image1.png",
+    "ingredients": [
+      "200g spaghetti",
+      "100g minced beef",
+      "1 onion, chopped",
+      "2 cloves garlic, minced",
+      "400g canned tomatoes",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Bring a large pot of salted water to boil and cook spaghetti according to package instructions until al dente. Reserve 1 cup of pasta water, then drain.",
+      "In a bowl, whisk together eggs, grated Parmesan cheese, salt, and pepper. Set aside.",
+      "In a large skillet, cook diced pancetta or bacon over medium heat until crispy. Remove from heat.",
+      "Add the drained pasta to the skillet and toss with the pancetta.",
+      "Pour the egg mixture over the pasta, tossing quickly to coat without scrambling the eggs. Add reserved pasta water a little at a time to achieve a creamy texture.",
+      "Serve immediately with extra Parmesan and freshly ground pepper."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "image3.png"
+    "image": "image3.png",
+    "ingredients": [
+      "500g chicken breast",
+      "2 tablespoons curry powder",
+      "1 onion, chopped",
+      "200ml coconut milk",
+      "1 teaspoon ginger, grated",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Marinate chicken pieces with yogurt, lemon juice, garlic, ginger, and spices (cumin, coriander, paprika, turmeric) for at least 1 hour.",
+      "Preheat oven to 200°C (400°F) and bake or grill the marinated chicken until cooked through. Set aside.",
+      "In a large pan, heat oil or butter and sauté chopped onions until golden.",
+      "Add garlic, ginger, and spices (garam masala, cumin, coriander, paprika) and cook for 1 minute.",
+      "Add tomato puree and cook for 5–7 minutes until thickened.",
+      "Stir in heavy cream or coconut milk, then add the cooked chicken. Simmer for 10 minutes.",
+      "Serve hot with rice or naan bread."
+    ]
   },
   {
     "id": 3,
     "title": "eba and ogbono",
     "summary": "a delicious nigerian delicacy made from dried cassava and dried ogbono tree seeds",
-    "image": "image2.png"
+    "image": "image2.png",
+    "ingredients": [
+    "2 cups garri (cassava flour)",
+    "4 cups water (for making eba)",
+    "1 cup ground ogbono seeds",
+    "500g assorted meat (beef, goat meat, or chicken)",
+    "200g stockfish (optional, soaked until soft)",
+    "200g dried fish",
+    "1/2 cup palm oil",
+    "2 tablespoons ground crayfish",
+    "2 scotch bonnet peppers (blended or chopped)",
+    "1 onion (chopped)",
+    "Vegetable leaves (ugu or spinach), washed and chopped",
+    "Seasoning cubes to taste",
+    "Salt to taste"
+  ],
+  "instructions": [
+      "Season and boil assorted meat with onions, seasoning cubes, and salt until tender. Set aside.",
+      "In a pot, heat palm oil and add the ground ogbono seeds. Stir continuously to avoid lumps.",
+      "Add meat stock gradually, stirring until the soup thickens.",
+      "Add crayfish, blended pepper, stockfish, and dried fish. Stir and allow to cook for 5–10 minutes.",
+      "Add the cooked meat and vegetable leaves. Simmer for 3 minutes and turn off heat.",
+      "For eba: boil water in a pot, reduce heat, and gradually add garri while stirring until smooth.",
+      "Serve the hot ogbono soup with eba."
+    ]
   }
 ]

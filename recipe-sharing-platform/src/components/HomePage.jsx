@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import RecipeDetail from "./RecipeDetail";
 import data from "../data.json"
 
 const HomePage = () => {
@@ -58,8 +60,14 @@ const HomePage = () => {
                             <h4>Image</h4>
                             <img src={recipe.image} alt={recipe.title} /> 
                         </div>
+                        <Link to={`/recipe/${recipe.id}`}>
+    <button className="mt-4 bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700">
+      View Recipe
+    </button>
+    </Link>
                     </div>
                 ))}
+                
             </div>
         </div>
     );
