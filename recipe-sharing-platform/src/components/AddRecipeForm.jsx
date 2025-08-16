@@ -44,16 +44,18 @@ const AddRecipeForm = () => {
   };
 
   return (
-    <div className=" bg-red-400 w-80 p-6 transform transition-all duration-500 ease-in-out
-                     hover:bg-red-300
-                     hover:scale-105 hover:shadow-2xl">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800">
+    <div className="md lg sm">
+      <div className="flex justify-center">
+      <h2 className="text-2xl font-bold mb-4 text-red-500">
         Add a New Recipe
       </h2>
-
+      </div>
+     <div className="flex justify-center bg-red-400 w-80 p-6 transform transition-all duration-500 ease-in-out
+                     hover:bg-red-300
+                     hover:scale-105 hover:shadow-2xl">
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Title */}
-        <div>
+        <div className="">
           <label className="block font-medium mb-1 text-gray-700">
             Recipe Title
           </label>
@@ -111,6 +113,7 @@ const AddRecipeForm = () => {
           Add Recipe
         </button>
       </form>
+      </div>
     </div>
   );
 };
