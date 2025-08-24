@@ -10,8 +10,16 @@ const RegistrationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!username || !email || !password) {
-      setError("All fields are required");
+    if (!username) {
+      setError("Username is required");
+      return;
+    }
+    if (!email) {
+      setError("Email is required");
+      return;
+    }
+    if (!password) {
+      setError("Password is required");
       return;
     }
 
@@ -22,7 +30,7 @@ const RegistrationForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <h2>Register</h2>
-      {error && <p className="text-red-500 mb-3">{error}</p>}
+      {error && <p>{error}</p>}
 
       <div>
         <label className="block mb-1">Username</label>
@@ -35,7 +43,7 @@ const RegistrationForm = () => {
       </div>
 
       <div>
-        <label className="block mb-1">Email</label>
+        <label>Email</label>
         <input
           type="email"
           name="email"
