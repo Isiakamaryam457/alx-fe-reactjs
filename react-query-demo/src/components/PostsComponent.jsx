@@ -8,6 +8,7 @@ const fetchPosts = async () => {
 const PostsComponent = () => {
     const {
         data, 
+        error,
         isError, 
         isLoading,
         refetch,
@@ -19,7 +20,7 @@ const PostsComponent = () => {
     });
 
     if (isLoading) return <div>Loading...</div>;
-    if (isError) return <div>Error loading data</div>;
+    if (isError) return <div>Error loading data: {error.message}</div>;
     
     return (
         <div>
