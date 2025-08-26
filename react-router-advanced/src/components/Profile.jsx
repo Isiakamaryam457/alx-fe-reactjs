@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Routes, Route, Outlet } from "react-router-dom";
 
 const Profile = () => {
     return (
@@ -10,8 +10,13 @@ const Profile = () => {
                 <Link to="settings">Profile settings</Link> |{" "}
                 <Link to="blog/123"> Blog Posts</Link>
             </nav>
-
-            <Outlet />
+             
+             <Outlet />
+       {/*<Routes>
+        <Route path="details" element={<ProfileDetails />} />
+        <Route path="settings" element={<ProfileSettings />} />
+        <Route path="/blog/:postId" element={<BlogPost />} />
+      </Routes> */}
         </div>
     )
 };
