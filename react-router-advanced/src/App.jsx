@@ -12,6 +12,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* <Route path="/profile" element={<Profile/>} />*/}
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<ProtectedRoute><Profile/></ProtectedRoute>}>
         <Route path="details"  element={<ProfileDetails/>} />
