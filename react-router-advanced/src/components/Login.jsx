@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { fakeAuth } from "./fakeAuth";
+import { useAuth } from "./useAuth";
 
 function Login() {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-     fakeAuth.login(() => {
+     useAuth.login(() => {
         navigate("/", { replace: true });
      });
     };

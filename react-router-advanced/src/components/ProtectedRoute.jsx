@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom";
-import { fakeAuth } from "./fakeAuth";
+import { fakeAuth } from "./useAuth";
 
 function ProtectedRoute({ children }) {
  if (!fakeAuth.isAuthenticated) {
